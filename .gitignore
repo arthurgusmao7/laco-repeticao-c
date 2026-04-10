@@ -1,0 +1,7 @@
+# Diretórios gerados na compilação
+
+# Arquivos finais de compilação
+bin/
+
+# Arquivos temporários de depuração
+obj/
