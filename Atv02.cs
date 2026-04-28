@@ -21,6 +21,8 @@ Observação: Vestigios de uso de IA, atividade zerada,
 ou código copiado de terceiros sem a devida citação, serão penalizados.
 
 */
+using System;
+
 public static class Atv02
 {
     public static void Executar()
@@ -53,6 +55,15 @@ public static class Atv02
 
         Console.WriteLine($"Quantidade de compras registradas: {quantidadeCompras}");
         Console.WriteLine($"Total arrecadado: R$ {totalArrecadado}");
+
+        if (quantidadeCompras > 0)
+        {
+            double mediaCompras = totalArrecadado / quantidadeCompras;
+            Console.WriteLine($"Valor médio das compras: R$ {mediaCompras:F2}");
+        }
+        else
+        {
+            Console.WriteLine("Não há compras válidas para calcular a média.");
+        }
     }
 }
-

@@ -16,10 +16,32 @@ Observação: Vestigios de uso de IA, atividade zerada,
 ou código copiado de terceiros sem a devida citação, serão penalizados.
 
 */
+using System;
+
 public static class Atv03
 {
     public static void Executar()
     {
+        string placa;
+        string opcao;
+        int cont = 0;
 
+        Console.Write("Deseja iniciar o cadastro? (s/n): ");
+        opcao = Console.ReadLine()!;
+
+        while (opcao == "s" || opcao == "S")
+        {
+            Console.Write("Digite a placa do veículo: ");
+            placa = Console.ReadLine()!;
+
+            cont = cont + 1;
+
+            Console.Write("Deseja cadastrar outra placa? (s/n): ");
+            opcao = Console.ReadLine()!;
+            Console.WriteLine();
+        }
+
+        Console.WriteLine($"Quantidade total de veículos registrados: {cont}");
+        Console.WriteLine("Fim do programa.");
     }
 }
